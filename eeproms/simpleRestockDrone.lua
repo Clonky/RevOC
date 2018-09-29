@@ -48,10 +48,13 @@ while true do
     drone.setStatusText("Working")
     -- restock every entry
     if coordList ~= nil then
-        for coord in coordList do
-            move(coord[1], coord[2], coord[3])
+        for iCoord = 1,#coordList do
+            X = coordList[iCoord][1]
+            Y = coordList[iCoord][2]
+            Z = coordList[iCoord][3]
+            move(X,Y,Z)
             restock()
-            move(-coord[1], -coord[2], -coord[3])
+            move(-X],-Y,-Z)
         end
     end
 end
