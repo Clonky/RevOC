@@ -38,11 +38,13 @@ end
 coordList = {}
 while true do
     --listen for new coords
-    modem.broadcst(beePort, "listening")
+    drone.setStatusText("Listening...")
+    modem.broadcast(beePort, "listening")
     newCoords = receiveCoords()
     if newCoords ~= nil then
         table.insert(coordList, newCoords)
     end
+    drone.setStatusText("Working")
     -- restock every entry
     if coordList ~= nil then
         for coord in coordList do
