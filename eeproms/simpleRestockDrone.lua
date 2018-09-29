@@ -2,6 +2,7 @@
 
 modem = component.proxy(component.list("modem"){})
 inv = component.proxy(component.list("inventory_controller"){})
+drone = component.proxy(component.list("drone"){})
 
 beePort = 25
 modem.open(beePort)
