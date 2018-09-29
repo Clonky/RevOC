@@ -1,7 +1,7 @@
 -- Drone to simply handle restocking using a list of apiaries
 
-modem = component.proxy(component.list("Modem"){})
-inv = component.proxy(component.list("Inventory_Controller"){})
+modem = component.proxy(component.list("modem"){})
+inv = component.proxy(component.list("inventory_controller"){})
 
 beePort = 25
 modem.open(beePort)
